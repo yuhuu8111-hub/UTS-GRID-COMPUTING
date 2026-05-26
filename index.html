@@ -2,21 +2,99 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>UTS Cloud Computing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTS Cloud Computing - Elegant 3D</title>
     <style>
-        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #e0f7fa; }
-        .box { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center; }
-        h1 { color: #00796b; }
+        /* Menggunakan warna elegan: Deep Midnight & Gold */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            perspective: 1000px; /* Penting untuk efek 3D */
+        }
+
+        /* Efek 3D Card dengan Glassmorphism */
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 50px;
+            border-radius: 30px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            color: white;
+            transition: transform 0.5s ease;
+            transform: rotateX(10deg) rotateY(-5deg); /* Posisi 3D Awal */
+        }
+
+        /* Interaksi 3D saat di-hover */
+        .card:hover {
+            transform: rotateX(0deg) rotateY(0deg) scale(1.05);
+            box-shadow: 0 35px 60px rgba(0, 0, 0, 0.6);
+        }
+
+        h1 {
+            background: linear-gradient(to right, #fbbf24, #f59e0b); /* Warna Gold */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        .status-badge {
+            background: rgba(16, 185, 129, 0.2);
+            color: #10b981;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            border: 1px solid #10b981;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.1);
+            margin: 20px 0;
+        }
+
+        .info p {
+            margin: 5px 0;
+            font-weight: 300;
+            color: #cbd5e1;
+        }
+
+        .info b {
+            color: white;
+        }
     </style>
 </head>
 <body>
-    <div class="box">
-        <h1>Implementasi PaaS - UTS Cloud</h1>
-        <p>Status: <strong>Berhasil Online di Cloud!</strong></p>
+
+    <div class="card">
+        <div class="status-badge">Berhasil Online di Cloud!</div>
+        <h1>Implementasi PaaS</h1>
+        <p style="font-size: 1.1rem;">UTS Cloud Computing</p>
+        
         <hr>
-        <p>Anggota 1: [Rayhan Prasetya Nugraha] - [G211220076]</p>
-        <p>Anggota 2: [Muhammad Zainal Arifin] - [G211220111]</p>
-        <p>BUTUH KOPI</p>
+        
+        <div class="info">
+            <p>Anggota 1: <b>[Rayhan Prasetya N.</b></p>
+            <p>NIM: <b>[G.211.22.0076]</b></p>
+            <br>
+            <p>Anggota 2: <b>[Muhammad Zainal Arifin]</b></p>
+            <p>NIM: <b>[G.211.22.0111]</b></p>
+        </div>
     </div>
+
 </body>
 </html>
